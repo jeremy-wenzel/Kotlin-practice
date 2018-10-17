@@ -1,19 +1,19 @@
 class Queue<E> : LinkedListKt<E>() {
     fun queue(item: E) {
-        container.add(item)
+        addLast(item)
     }
 
     fun pop(): E? {
         if (isEmpty) {
             return null
         }
-        return container.removeFirst()
+        return removeFirst()
     }
 
     fun poll(): E? {
         if (isEmpty) {
             return null
         }
-        return container.peekFirst()
+        return peekFirst()
     }
 }

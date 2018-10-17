@@ -1,19 +1,19 @@
 class Stack<E> : LinkedListKt<E>() {
     fun push(item: E) {
-        container.addLast(item)
+        addLast(item)
     }
 
     fun peek() : E? {
         if (isEmpty) {
             return null
         }
-        return container.peekLast()
+        return peekLast()
     }
 
     fun pop() : E? {
         if (isEmpty) {
             return null
         }
-        return container.removeLast()
+        return removeLast()
     }
 }
